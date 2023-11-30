@@ -16,7 +16,7 @@ run: all
 	./prog1 & ./prog2 &
 
 scaling_omp: all
-	./scaling_omp.sh
+	bash scaling_omp.sh
 
 clean:
 	rm -f prog1 prog2

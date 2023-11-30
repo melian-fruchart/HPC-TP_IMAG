@@ -15,7 +15,7 @@ run: all
 	./prog1 & ./prog2 &
 
 scaling: all
-	./scaling.sh
+	bash scaling.sh
 
 clean:
 	rm -f prog1 prog2

@@ -16,7 +16,7 @@ run: all
 	./prog1 & ./prog2 &
 
 compare: all
-	./compare.sh
+	bash compare.sh
 
 clean:
 	rm -f prog1 prog2
