@@ -35,6 +35,6 @@ int main(int argc, char const *argv[]) {
     TOC();
 
     // check_matrix(res);
-    printf("%s: terminé en %.1lfs\n", __FILE__, TICTOC_SECONDS);
+    printf("%s: terminé en %.3lfs\n", __FILE__, TICTOC_SECONDS);
     return 0;
 }
