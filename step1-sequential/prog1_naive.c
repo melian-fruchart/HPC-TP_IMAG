@@ -1,15 +1,15 @@
 #include <stdlib.h>
 #include <stdio.h>
 
-int matrix_size = 1500;
+int matrix_size = 800;
 
 #include "utils.c"
 
 void matrix_multiply(double **mat1, double **mat2, double **res)
 {
     for (int i = 0; i < matrix_size; i++)
-        for (int k = 0; k < matrix_size; k++)
-            for (int j = 0; j < matrix_size; j++)
+        for (int j = 0; j < matrix_size; j++)
+            for (int k = 0; k < matrix_size; k++)
                 res[i][j] += mat1[i][k] * mat2[k][j];
 }
 
