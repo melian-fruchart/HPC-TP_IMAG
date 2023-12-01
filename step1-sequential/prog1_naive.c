@@ -1,23 +1,20 @@
-#include <stdlib.h>
 #include <stdio.h>
+#include <stdlib.h>
 
-int matrix_size = 800;
+int matrix_size = 500;
 
 #include "utils.c"
 
-void matrix_multiply(double **mat1, double **mat2, double **res)
-{
+void matrix_multiply(double **mat1, double **mat2, double **res) {
     for (int i = 0; i < matrix_size; i++)
         for (int j = 0; j < matrix_size; j++)
             for (int k = 0; k < matrix_size; k++)
                 res[i][j] += mat1[i][k] * mat2[k][j];
 }
 
-int main(int argc, char const *argv[])
-{
+int main(int argc, char const *argv[]) {
     /* The matrix size can be passed as an argument */
-    if (argc > 1)
-    {
+    if (argc > 1) {
         matrix_size = atoi(argv[1]);
     }
 
@@ -25,14 +22,13 @@ int main(int argc, char const *argv[])
     double **mat2 = (double **)malloc(sizeof(double *) * matrix_size);
     double **res = (double **)malloc(sizeof(double *) * matrix_size);
 
-    for (int i = 0; i < matrix_size; i++)
-    {
+    for (int i = 0; i < matrix_size; i++) {
         mat1[i] = (double *)calloc(matrix_size, sizeof(double));
         mat2[i] = (double *)calloc(matrix_size, sizeof(double));
         res[i] = (double *)calloc(matrix_size, sizeof(double));
     }
 
-    // initialize_matrices_step1(mat1, mat2);
+    initialize_matrices(mat1, mat2);
 
     TIC();
     matrix_multiply(mat1, mat2, res);
