@@ -3,7 +3,7 @@
 #include <sys/time.h>
 #include <time.h>
 
-int initialize_matrices_step1(double **mat1, double **mat2)
+int initialize_matrices(double **mat1, double **mat2)
 {
     for (int i = 0; i < matrix_size; i++)
     {
