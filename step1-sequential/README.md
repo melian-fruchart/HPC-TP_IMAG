@@ -5,12 +5,14 @@ Dans cette première étape nous étudions une implémentation naive d'un progra
 
 ```make```
 
+Le programme prog2_optimized n'est pas à exécuter immédiatement mais nous servira par la suite.
+
 ### **2. Lire et exécuter l'implémentation originale dans [prog1_naive.c](./prog1_naive.c)**
 
 
-Ce code C implémente un programme qui multiplie deux matrices carrés. Si un argument est fourni lors de l'exécution, il définit la taille des matrices (par defaut 500x500 éléments). 
+Ce code C implémente un programme qui multiplie deux matrices carrés. Si un argument est fourni lors de l'exécution, il définit la taille des matrices (par défaut 500x500 éléments).
 
-Le programme alloue dynamiquement de la mémoire (`malloc`) pour deux matrices d'entrée et une matrice de résultat, toutes de taille spécifiée. Chaque élément des matrices d'entrée mat1 et mat2 sont initialisé par la fonction `initialize_matrices`, la matrice résultat est initialisé à zéro (`calloc`).
+Le programme alloue dynamiquement de la mémoire (`malloc`) pour deux matrices d'entrée et une matrice de résultat, toutes de taille spécifiée. Les matrices d'entrée mat1 et mat2 sont initialisées par la fonction `initialize_matrices`, et la matrice résultat est initialisée à zéro (`calloc`).
 
 Ensuite, le programme effectue la multiplication de ces matrices et mesure le temps pris pour cette opération. Les méthodes `TIC` et `TOC` permettent de mesurer le temps d'exécution entre leurs deux appels (en seconde).
 Finalement, il affiche la durée de cette opération (`TICTOC_SECONDS`) avant de se terminer. 
@@ -31,18 +33,18 @@ Pour exécuter le programme :
 ./scaling_naive.sh
 ```
 
- - Comment expliqué vous l'évolution du temps d'exécution en fonction de la taille des matrices. 
+ - Décrivez l'évolution du temps d'exécution en fonction de la taille des matrices.
  
- - Étudiez la complexité calculatoire de l'algorithme utilisé ainsi que son empreinte mémoire.
- 
+ - Étudiez la complexité temporelle de l'algorithme utilisé, ainsi que son empreinte mémoire (complexité spatiale). Qu'en déduisez vous vis à vis de l'évolution du temps d'éxécution ?
+
+Il est possible de vérifier l'empreinte mémoire d'un programme avec la commande `top` ou `htop` (colonne RES exprimée en KiB).
+
  - Prédire le temps d'exécution de matrices de 2000x2000 éléments ainsi que l'empreinte mémoire de ce programme.
 
  Vous pouvez vérifier le temps d'exécution en utilisant la commande suivante :
  `./prog1_naive 2000`
 
- Vous pouvez vérifier l'empreinte mémoire d'un programme avec la commande `top` ou `htop` (colonne RES exprimée en KiB).
-
-- Quelle doit être la taille maximum du problème pour que le calculs prenne moins de 60 secondes.
+- Quelle doit être la taille maximale du problème pour que le calcul prenne moins de 60 secondes.
 
 
 # Optimized version
@@ -57,7 +59,7 @@ Lire et exécuter l'implémentation optimisée dans [prog2_optimized.c](./prog2_
 - Identifier la différence entre ces deux programmes
 - Comment expliquez vous cette différence de performance ?
 (indice : [Locality and Caching](https://www.cs.utexas.edu/users/fussell/courses/cs429h/lectures/Lecture_18-429h.pdf))
-- A l'aide du script [scaling_both.sh](./scaling_both.sh) étudiez l'évolution du temps des deux programmes. 
+- A l'aide du script [scaling_both.sh](./scaling_both.sh), étudiez l'évolution du temps des deux programmes.
 
 
 
