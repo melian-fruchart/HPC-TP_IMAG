@@ -1,19 +1,18 @@
 CC = gcc
 SHELL = /bin/bash
-OPT = -fopenmp
-all: prog1 prog2
+all: prog1_naive prog2_optimized
 
-prog1: prog1.c
-	$(CC) $(OPT) -o prog1 prog1.c
+prog1_naive: prog1_naive.c
+	$(CC) -O0 -fopenmp -o prog1_naive prog1_naive.c
 
-prog2: prog2.c
-	$(CC) $(OPT) -o prog2 prog2.c
+prog2_optimized: prog2_optimized.c
+	$(CC) -O0 -fopenmp -o prog2_optimized prog2_optimized.c
 
 pull:
 	git pull
 
 run: all
-	./prog1 & ./prog2 &
+	./prog1_naive & ./prog2_optimized &
 
 clean:
-	rm -f prog1 prog2
+	rm -f prog1_naive prog2_optimized
