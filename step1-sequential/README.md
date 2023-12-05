@@ -1,11 +1,12 @@
-# Sequential exécution
-Dans cette première étape nous étudions une implémentation naive d'un programme de multiplication de matrices. Nous étudions ensuite comment une petite modification du programme original peut améliorer les perforamnces.
+# Sequential execution
+Dans cette première étape nous étudions une implémentation naive d'un programme de multiplication de matrices. Nous étudions ensuite comment une petite modification du programme original peut améliorer les performances.
 
 ### **1. Compiler les programmes prog1_naive et prog2_optimized**
+Dans le répertoire `step1-sequential/` :
 
 ```make```
 
-Le programme prog2_optimized n'est pas à exécuter immédiatement mais nous servira par la suite.
+Le programme `prog2_optimized` n'est pas à exécuter immédiatement mais nous servira par la suite.
 
 ### **2. Lire et exécuter l'implémentation originale dans [prog1_naive.c](./prog1_naive.c)**
 
@@ -28,8 +29,8 @@ Pour exécuter le programme :
 
 # Scaling analysis
 
- A l'aide du script [scaling_naive.sh](./scaling_naive.sh), étudiez l'évolution de la performance du programme pour des tailles de matrices de plus en plus grande :
- ```
+A l'aide du script [scaling_naive.sh](./scaling_naive.sh), étudiez l'évolution de la performance du programme pour des tailles de matrices de plus en plus grande :
+```
 ./scaling_naive.sh
 ```
 
