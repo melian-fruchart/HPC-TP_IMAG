@@ -1,8 +1,8 @@
-#include <stdlib.h>
 #include <stdio.h>
+#include <stdlib.h>
 #include <omp.h>
 
-int matrix_size = 1500;
+int matrix_size = 500;
 
 #include "utils.c"
 
@@ -34,13 +34,13 @@ int main(int argc, char const *argv[])
         res[i] = (double *)calloc(matrix_size, sizeof(double));
     }
 
-    // initialize_matrices_step1(mat1, mat2);
+    initialize_matrices(mat1, mat2);
 
     TIC();
     matrix_multiply(mat1, mat2, res);
     TOC();
 
     // check_matrix(res);
-    printf("%s: terminé en %.1lfs\n", __FILE__, TICTOC_SECONDS);
+    printf("%s: terminé en %.3lfs\n", __FILE__, TICTOC_SECONDS);
     return 0;
 }

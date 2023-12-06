@@ -1,5 +1,11 @@
 #!/bin/bash
-export OMP_NUM_THREADS=1
+
+# The number of threads can be passed as an argument 
+if [[ "$#" -gt 0 && $1 -gt 0 ]]; then
+        export OMP_NUM_THREADS=$1
+else
+        export OMP_NUM_THREADS=1
+fi
 
 # Print number of threads
 echo "Running '$(basename $0)' on $OMP_NUM_THREADS thread(s)."

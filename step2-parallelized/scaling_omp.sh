@@ -7,7 +7,7 @@ printf "%-18s\t%-20s\t%-20s\n" "Nombre de threads" "Taille de la matrice" "Temps
 threads=$(seq 1 1 8)
 
 # Array of matrix sizes
-sizes=$(seq 400 200 1000)
+sizes=$(seq 200 200 1000)
 
 for t in $threads; do
     export OMP_NUM_THREADS=$t
