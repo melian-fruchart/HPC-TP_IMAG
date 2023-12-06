@@ -36,11 +36,11 @@ A l'aide du script [scaling_naive.sh](./scaling_naive.sh), étudiez l'évolution
 
  - Décrivez l'évolution du temps d'exécution en fonction de la taille des matrices.
  
- - Étudiez la complexité algorithmique (nombre d'opérations) de l'algorithme utilisé, ainsi que sa complexité spatiale (empreinte mémoire). Qu'en déduisez vous vis à vis de l'évolution du temps d'éxécution ?
+ - Étudiez la complexité algorithmique (nombre d'opérations) de l'algorithme utilisé, ainsi que sa complexité spatiale (empreinte mémoire). Est-ce en accord avec l'évolution du temps d'exécution ?
 
 Il est possible de vérifier l'empreinte mémoire d'un programme avec la commande `top` ou `htop` (colonne RES exprimée en KiB).
 
-- Prédire le temps d'exécution de matrices de 2000x2000 éléments ainsi que l'empreinte mémoire de ce programme.
+- Prédire le temps d'exécution de matrices de 2000x2000 éléments ainsi que l'empreinte mémoire de ce programme (sachant que la taille d'un double est de 8 octets).
 
 Vous pouvez vérifier le temps d'exécution en utilisant la commande suivante :
 `./prog1_naive 2000`
@@ -58,8 +58,7 @@ Lire et exécuter l'implémentation optimisée dans [prog2_optimized.c](./prog2_
 ```
 
 - Identifier la différence entre ces deux programmes
-- Comment expliquez vous cette différence de performance ?
-(indice : [Locality and Caching](https://www.cs.utexas.edu/users/fussell/courses/cs429h/lectures/Lecture_18-429h.pdf))
+- Comment expliquez vous cette différence de performance ? **Essayez de formuler des hypothèses, de représenter les multiplications, et n'hésitez pas à nous poser des questions ou nous soumettre des théories.** (Si jamais aucune idée ne vous vient, vous pouvez consulter l'indice : [Locality and Caching](https://www.cs.utexas.edu/users/fussell/courses/cs429h/lectures/Lecture_18-429h.pdf))
 - A l'aide du script [scaling_both.sh](./scaling_both.sh), étudiez l'évolution du temps des deux programmes.
 
 

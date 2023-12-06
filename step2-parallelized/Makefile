@@ -15,4 +15,4 @@ run: all
 	./prog1_naive & ./prog2_optimized &
 
 clean:
-	rm -f prog1_naive prog2_optimized
+	rm -f prog1_naive prog2_optimized openmp_hello

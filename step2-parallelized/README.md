@@ -13,8 +13,8 @@ gcc -fopenmp openmp_hello.c -o openmp_hello
 ./openmp_hello
 ```
 
-- Recherchez ce que fait la variable d'environnement `OMP_NUM_THREADS` ([Variables d'environnement](https://gcc.gnu.org/onlinedocs/libgomp/Environment-Variables.html))
-- Exécutez quelques fois le programme après avoir défini des nombres de threads différents (`export OMP_NUM_THREADS=3`).
+- Recherchez sur internet à quoi sert la variable d'environnement `OMP_NUM_THREADS` ([Variables d'environnement](https://gcc.gnu.org/onlinedocs/libgomp/Environment-Variables.html))
+- Commentez la ligne `omp_set_num_threads(4);` puis exécutez quelques fois le programme, après avoir défini des nombres de threads différents (`export OMP_NUM_THREADS=3`).
 
 ### **1. Compiler les programmes prog1_naive et prog2_optimized**
 
@@ -27,7 +27,7 @@ Le programme `prog1_naive` n'est pas à exécuter immédiatement mais nous servi
 ### **2. Lire et expérimenter avec l'implémentation parallélisée dans [prog2_optimized.c](./prog2_optimized.c)**
 
 - Comprendre la syntaxe permettant de paralléliser des boucles for.
-- ÈTudiez différentes exécution avec un nombre dde threads différent
+- Etudiez différentes exécution avec un nombre de threads différent
 
 ```bash
 export OMP_NUM_THREADS=n
