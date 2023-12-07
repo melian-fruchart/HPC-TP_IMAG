@@ -34,18 +34,18 @@ A l'aide du script [scaling_naive.sh](./scaling_naive.sh), étudiez l'évolution
 ./scaling_naive.sh
 ```
 
- - Décrivez l'évolution du temps d'exécution en fonction de la taille des matrices.
- 
- - Étudiez la complexité algorithmique (nombre d'opérations) de l'algorithme utilisé, ainsi que sa complexité spatiale (empreinte mémoire). Est-ce en accord avec l'évolution du temps d'exécution ?
+- Décrivez l'évolution du temps d'exécution en fonction de la taille des matrices.
 
-Il est possible de vérifier l'empreinte mémoire d'un programme avec la commande `top` ou `htop` (colonne RES exprimée en KiB).
+- Étudiez la complexité algorithmique (nombre d'opérations) de l'algorithme utilisé, ainsi que sa complexité spatiale (empreinte mémoire). Est-ce en accord avec l'évolution du temps d'exécution ?
 
-- Prédire le temps d'exécution de matrices de 2000x2000 éléments ainsi que l'empreinte mémoire de ce programme (sachant que la taille d'un double est de 8 octets).
+Il est possible de vérifier l'empreinte mémoire d'un programme avec la commande `top` ou `htop` (colonne RES exprimée en KiB) (il vaut mieux vérifier l'empreinte mémoire lors de l'exécution de `prog1_naive`, car les tailles des matrices changent durant l'exécution de `scaling_naive.sh`).
+
+- Prédire le temps d'exécution de matrices de 2000x2000 éléments ainsi que l'empreinte mémoire (sachant que la taille d'un double est de 8 octets).
 
 Vous pouvez vérifier le temps d'exécution en utilisant la commande suivante :
 `./prog1_naive 2000`
 
-- Quelle doit être la taille maximale du problème pour que le calcul prenne moins de 60 secondes.
+- Quelle doit être la taille maximale du problème pour que le calcul prenne moins de 60 secondes ?
 
 
 # Optimized version
