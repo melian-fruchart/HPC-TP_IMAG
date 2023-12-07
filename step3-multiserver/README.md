@@ -19,11 +19,11 @@ Chaque machine effectue alors une partie de la multiplication de matrices, puis 
 - Après avoir compris ce que fait le programme, exécutez le avec ```make parallel_run```.
 - Selon vous, combien de temps prendra l'exécution de ce programme avec une matrice de 1500x1500 ? 
 
->Pour passer la taille de matrice en paramètre au programme exécuté, il faut modifier la ligne de commmande de la target `parallel_run` dans le makefile, tel que montré ci-dessous :
->```makefile
->parallel_run: prog2_optimized_mpi copy_binary
->	$(MPIRUN) -np 2 --host $(THIS_SERVER),$(PEER_SERVER) ./prog2_optimized_mpi [taille matrice]
->```
+Pour passer la taille de matrice en paramètre au programme exécuté, il faut modifier la ligne de commmande de la target `parallel_run` dans le makefile, tel que montré ci-dessous :
+```makefile
+parallel_run: prog2_optimized_mpi copy_binary
+	$(MPIRUN) -np 2 --host $(THIS_SERVER),$(PEER_SERVER) ./prog2_optimized_mpi [taille matrice]
+```
 
 
 - Modifiez le Makefile et vérifiez le temps d'exécution du programme pour une matrice de 1500x1500.
