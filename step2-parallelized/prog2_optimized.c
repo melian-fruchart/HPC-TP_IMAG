@@ -8,7 +8,7 @@ int matrix_size = 500;
 
 void matrix_multiply(double **mat1, double **mat2, double **res)
 {
-#pragma omp parallel for
+    #pragma omp parallel for
     for (int i = 0; i < matrix_size; i++)
         for (int k = 0; k < matrix_size; k++)
             for (int j = 0; j < matrix_size; j++)
@@ -40,7 +40,13 @@ int main(int argc, char const *argv[])
     matrix_multiply(mat1, mat2, res);
     TOC();
 
+    int nb_threads;
+    #pragma omp parallel
+    {
+        nb_threads = omp_get_num_threads();
+    }
+
     // check_matrix(res);
-    printf("%s: terminé en %.3lfs\n", __FILE__, TICTOC_SECONDS);
+    printf("%s: terminé en %.3lf (size: %d) (threads: %d)\n", __FILE__, TICTOC_SECONDS, matrix_size, nb_threads);
     return 0;
 }

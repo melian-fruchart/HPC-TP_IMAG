@@ -7,13 +7,13 @@ printf "%-18s\t%-20s\t%-20s\n" "Nombre de threads" "Taille de la matrice" "Temps
 threads=$(seq 1 1 8)
 
 # Array of matrix sizes
-sizes=$(seq 200 200 1000)
+sizes=$(seq 300 200 1100)
 
 for t in $threads; do
     export OMP_NUM_THREADS=$t
     for i in $sizes; do
         result=$(./prog2_optimized $i)
-        time=$(echo $result | awk '{print $(NF)}')  # Assuming the second last word is the time
+        time=$(echo $result | cut -d"(" -f1 | awk '{print $(NF)}')  # Assuming the second last word is the time
         printf "%-18s\t%-20s\t%-20s\n" "${t}" "${i}*${i}" "$time"
     done
     printf "\n"
