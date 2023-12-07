@@ -17,3 +17,9 @@ Il est aussi possible de modifier le nombre de threads dans le Makefile, en chan
 - Après avoir compris ce que fait le programme, exécutez le avec ```make parallel_run```.
 - Selon vous, combien de temps prendra l'exécution de ce programme avec une matrice de 1500x1500 ? 
 - Modifiez le Makefile et vérifiez le temps d'exécution du programme pour une matrice de 1500x1500.
+
+
+# Bilan
+
+- Pour une multiplication de matrices de 1500x1500, quels ont été les facteurs d'accélération entre les différentes "améliorations" du programme (naive, optimized, OpenMP, MPI, OpenMP + MPI) ?
+- Quel a été le facteur d'accélération total ?
