@@ -7,7 +7,7 @@ int matrix_size = 500;
 #include "utils.c"
 
 void matrix_multiply(double **mat1, double **mat2, double **res, int myrank, int nb_ranks, char *processor_name) {
-    printf("Process %d of %d on %s (size : %d)\n", myrank, nb_ranks, processor_name, matrix_size);
+    printf("%s: Process %d of %d on %s (size : %d)\n", __FILE__, myrank, nb_ranks, processor_name, matrix_size);
 
     int start = myrank * (matrix_size / 2);
     int end = start + (matrix_size / 2);
@@ -38,6 +38,10 @@ int main(int argc, char const *argv[]) {
 
     assert(nb_ranks % 2 == 0);
     assert(matrix_size % 2 == 0);
+
+    if (myrank == 0) {
+        printf("\n--------------------------------------------------------------------------------\nStarting %s execution.\n--------------------------------------------------------------------------------\n", __FILE__);
+    }
 
     double **mat1 = (double **)malloc(sizeof(double *) * matrix_size);
     double **mat2 = (double **)malloc(sizeof(double *) * matrix_size);

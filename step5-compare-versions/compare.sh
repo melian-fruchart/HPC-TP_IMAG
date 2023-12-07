@@ -48,10 +48,10 @@ printf "%-20s %-20s %-20s %-15s\n" "IKJ + OPENMP" "$OMP_NUM_THREADS" "1" "$TIME"
 
 # STEP 3 = MPI
 export OMP_NUM_THREADS=1
-TIME=$(mpirun -np 2 --host $THIS_SERVER,$PEER_SERVER ../step3-multiserver/prog2_optimized_mpi $MATRICE_SIZE | awk '/finished in/{print $4}')
+TIME=$(mpirun -np 2 --host $THIS_SERVER,$PEER_SERVER ~/HPC-tp_imag-steps/step3-multiserver/prog2_optimized_mpi $MATRICE_SIZE | awk '/finished in/{print $4}')
 printf "%-20s %-20s %-20s %-15s\n" "IKJ + MPI" "$OMP_NUM_THREADS" "2" "$TIME"
 
 # STEP 4 = MPI + OPENMP
 export OMP_NUM_THREADS=4
-TIME=$(OMP_PROC_BIND=spread OMP_PLACES=cores mpirun -np 2 --map-by ppr:1:socket:pe=4 --host $THIS_SERVER,$PEER_SERVER ../step4-multiserver+parallelized/prog2_optimized_mpi_omp $MATRICE_SIZE | awk '/finished in/{print $4}')
+TIME=$(OMP_PROC_BIND=spread OMP_PLACES=cores mpirun -np 2 --map-by ppr:1:socket:pe=4 --host $THIS_SERVER,$PEER_SERVER ~/HPC-tp_imag-steps/step4-multiserver+parallelized/prog2_optimized_mpi_omp $MATRICE_SIZE | awk '/finished in/{print $4}')
 printf "%-20s %-20s %-20s %-15s\n" "IKJ + MPI + OPENMP" "$OMP_NUM_THREADS" "2" "$TIME"
