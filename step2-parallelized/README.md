@@ -1,5 +1,5 @@
 # Parallelized execution
-Dans cette deuxième étape, nous étudions la parallélisation du programme de multiplication de matrice vu précédemment.
+Dans cette deuxième étape, nous étudions la parallélisation du programme de multiplication de matrices vu précédemment.
 Pour cela nous utiliserons le modèle de programmation OpenMP. 
 
 OpenMP (Open Multi-Processing) est une API (Application Programming Interface) pour la programmation parallèle en mémoire partagée. Elle est principalement utilisée pour améliorer les performances des programmes en exploitant la puissance des architectures de processeurs multi-cœurs. 
@@ -24,7 +24,7 @@ Dans le répertoire `step2-parallelized/` :
 
 Le programme `prog1_naive` n'est pas à exécuter immédiatement mais nous servira par la suite.
 
-### **2. Lire et expérimenter avec l'implémentation parallélisée dans [prog2_optimized.c](./prog2_optimized.c)**
+### **2. Lire et expérimenter avec l'implémentation parallélisée [prog2_optimized.c](./prog2_optimized.c)**
 
 - Comprendre la syntaxe permettant de paralléliser des boucles for.
 - Etudiez différentes exécution avec un nombre de threads différent
@@ -37,7 +37,7 @@ export OMP_NUM_THREADS=n
 # OpenMP scaling
 
 
-- Selon vous, quel est le meilleur nombre de threads a utiliser ? (indice: utilisez la commande `lscpu`)
+- Selon vous, quel est le meilleur nombre de threads à utiliser ? (indice: utilisez la commande `lscpu`)
 
 
 - A l'aide du script [scaling_omp.sh](./scaling_omp.sh), étudiez l'évolution de la performance du programme pour un nombre de threads de plus en plus grand, et une taille de matrice fixée :
@@ -45,5 +45,5 @@ export OMP_NUM_THREADS=n
 ./scaling_omp.sh
 ```
 
-- Décrivez l'évolution du temps d'éxecution en fonction du nombre de threads et expliquez le comportement de la performance.
+- Décrivez l'évolution du temps d'exécution en fonction du nombre de threads et expliquez le comportement de la performance.
 - De quel facteur le programme est il accéléré ?

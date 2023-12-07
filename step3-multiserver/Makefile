@@ -18,8 +18,8 @@ pull:
 copy_binary: prog2_optimized_mpi
 	./ship_binary.sh prog2_optimized_mpi
 
-parallel_run: prog2_optimized_mpi # TODO : copy_binary
-	$(MPIRUN) -np 2 --host $(THIS_SERVER),$(PEER_SERVER) prog2_optimized_mpi
+parallel_run: prog2_optimized_mpi copy_binary
+	$(MPIRUN) -np 2 --host $(THIS_SERVER),$(PEER_SERVER) ./prog2_optimized_mpi
 
 clean:
 	rm -f prog2_optimized_mpi

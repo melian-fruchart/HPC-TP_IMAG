@@ -15,7 +15,7 @@ Ce code C implémente un programme qui multiplie deux matrices carrés. Si un ar
 
 Le programme alloue dynamiquement de la mémoire (`malloc`) pour deux matrices d'entrée et une matrice de résultat, toutes de taille spécifiée. Les matrices d'entrée mat1 et mat2 sont initialisées par la fonction `initialize_matrices`, et la matrice résultat est initialisée à zéro (`calloc`).
 
-Ensuite, le programme effectue la multiplication de ces matrices et mesure le temps pris pour cette opération. Les méthodes `TIC` et `TOC` permettent de mesurer le temps d'exécution entre leurs deux appels (en seconde).
+Ensuite, le programme effectue la multiplication de ces matrices et mesure le temps pris pour cette opération. Les méthodes `TIC` et `TOC` permettent de mesurer le temps d'exécution entre leurs deux appels (en secondes).
 Finalement, il affiche la durée de cette opération (`TICTOC_SECONDS`) avant de se terminer. 
 
 Note : Le code pour la vérification du résultat est commentée et sera utilisé dans la suite du TP.
@@ -38,12 +38,12 @@ A l'aide du script [scaling_naive.sh](./scaling_naive.sh), étudiez l'évolution
  
  - Étudiez la complexité algorithmique (nombre d'opérations) de l'algorithme utilisé, ainsi que sa complexité spatiale (empreinte mémoire). Est-ce en accord avec l'évolution du temps d'exécution ?
 
-Il est possible de vérifier l'empreinte mémoire d'un programme avec la commande `top` ou `htop` (colonne RES exprimée en KiB).
+>Il est possible de vérifier l'empreinte mémoire d'un programme avec la commande `top` ou `htop` (colonne RES exprimée en KiB).
 
 - Prédire le temps d'exécution de matrices de 2000x2000 éléments ainsi que l'empreinte mémoire de ce programme (sachant que la taille d'un double est de 8 octets).
 
-Vous pouvez vérifier le temps d'exécution en utilisant la commande suivante :
-`./prog1_naive 2000`
+>Vous pouvez vérifier le temps d'exécution en utilisant la commande suivante :
+>`./prog1_naive 2000`
 
 - Quelle doit être la taille maximale du problème pour que le calcul prenne moins de 60 secondes.
 
