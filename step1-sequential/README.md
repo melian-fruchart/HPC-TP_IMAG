@@ -40,10 +40,10 @@ A l'aide du script [scaling_naive.sh](./scaling_naive.sh), étudiez l'évolution
 
 Il est possible de vérifier l'empreinte mémoire d'un programme avec la commande `top` ou `htop` (colonne RES exprimée en KiB) (il vaut mieux vérifier l'empreinte mémoire lors de l'exécution de `prog1_naive`, car les tailles des matrices changent durant l'exécution de `scaling_naive.sh`).
 
-- Prédire le temps d'exécution de matrices de 2000x2000 éléments ainsi que l'empreinte mémoire (sachant que la taille d'un double est de 8 octets).
+- Prédire le temps d'exécution de matrices de 1500x1500 éléments ainsi que l'empreinte mémoire (sachant que la taille d'un double est de 8 octets).
 
 Vous pouvez vérifier le temps d'exécution en utilisant la commande suivante :
-`./prog1_naive 2000`
+`./prog1_naive 1500`
 
 - Quelle doit être la taille maximale du problème pour que le calcul prenne moins de 60 secondes ?
 
