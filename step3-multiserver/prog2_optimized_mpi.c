@@ -75,11 +75,11 @@ int main(int argc, char const *argv[]) {
     TOC();
 
     if (myrank == 0) {
-        printf("\n%s: finished in %.3lfs\n", __FILE__, TICTOC_SECONDS);
+        printf("%s: finished in %.3lf (size: %d)\n", __FILE__, TICTOC_SECONDS, matrix_size);
         fprintf(stdout, "%s: checking result...", __FILE__);
         fflush(stdout);
         check_matrix(res);
-        printf("done...\n");
+        printf("done...\n--------------------------------------------------------------------------------\n");
     }
 
 

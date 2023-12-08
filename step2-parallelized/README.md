@@ -22,8 +22,6 @@ Dans le répertoire `step2-parallelized/` :
 
 ```make```
 
-Le programme `prog1_naive` n'est pas à exécuter immédiatement mais nous servira par la suite.
-
 ### **2. Lire et expérimenter avec l'implémentation parallélisée [prog2_optimized.c](./prog2_optimized.c)**
 
 - Comprendre la syntaxe permettant de paralléliser des boucles for.
