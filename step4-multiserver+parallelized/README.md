@@ -16,11 +16,5 @@ parallel_run: prog2_optimized_mpi copy_binary
 ```
 Il est aussi possible de modifier le nombre de threads dans le Makefile, en changeant la valeur associée à `OMP_NUM_THREADS` (voir commande ci-dessus).
 
-- Selon vous, combien de temps prendra l'exécution de ce programme avec une matrice de 1500x1500 ? 
+- Vis à vis du temps d'exécution de `prog2_optimized_mpi.c`, estimez combien de temps prendra l'exécution de `prog2_optimized_mpi_omp.c` avec une matrice de 1500x1500 ? 
 - Modifiez le Makefile et vérifiez le temps d'exécution du programme pour une matrice de 1500x1500.
-
-
-# Bilan
-
-- Pour une multiplication de matrices de 1500x1500, quels ont été les facteurs d'accélération entre les différentes "améliorations" du programme (naive, optimized, OpenMP, MPI, OpenMP + MPI) ?
-- Quel a été le facteur d'accélération total ?

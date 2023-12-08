@@ -13,5 +13,4 @@ L'architecture réseau du TP, les outils de travail et des informations utiles s
 - [Etape 2](./step2-parallelized/)  
 - [Etape 3](./step3-multiserver/)  
 - [Etape 4](./step4-multiserver+parallelized/)  
-
-## Bilan
+- [Etape 5](./step5-compare-versions/)  

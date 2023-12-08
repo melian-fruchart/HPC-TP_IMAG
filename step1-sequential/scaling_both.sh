@@ -4,7 +4,7 @@
 printf "%-18s\t%-20s\t%-20s\n" "Taille de la matrice" "Temps prog1_naive (s)" "Temps prog2_optimized (s)"
 
 # Array of matrix sizes
-sizes=$(seq 100 100 1500)
+sizes=$(seq 100 100 1200)
 
 # Loop through sizes and print formatted output
 for i in $sizes; do
