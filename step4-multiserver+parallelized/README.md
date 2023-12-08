@@ -16,5 +16,5 @@ parallel_run: prog2_optimized_mpi copy_binary
 ```
 Il est aussi possible de modifier le nombre de threads dans le Makefile, en changeant la valeur associée à `OMP_NUM_THREADS` (voir commande ci-dessus).
 
-- Vis à vis du temps d'exécution de `prog2_optimized_mpi.c`, estimez combien de temps prendra l'exécution de `prog2_optimized_mpi_omp.c` avec une matrice de 1500x1500 ? 
+- Vis à vis du temps d'exécution de `prog2_optimized_mpi`, estimez le temps que prendra l'exécution de `prog2_optimized_mpi_omp` avec une matrice de 1500x1500.
 - Modifiez le Makefile et vérifiez le temps d'exécution du programme pour une matrice de 1500x1500.

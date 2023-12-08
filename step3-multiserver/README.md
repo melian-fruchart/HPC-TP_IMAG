@@ -13,7 +13,7 @@ make parallel_run
 Cette commande se charge de compiler le programme, d'envoyer une copie du binaire sur la deuxième machine (via le script `ship_binary.sh`), puis de lancer l'exécution. 
 Chaque machine effectue alors une partie de la multiplication de matrices, puis le résultat final est obtenu en fusionnant les deux parties. 
 
-- Sachant que l'exécution de `prog2_optimized.c` a mis 60 secondes sur un seul thread et une seule machine, estimez le temps que prendra l'exécution de `prog2_optimized_mpi.c` avec une matrice de 1500x1500 ? 
+- Sachant que l'exécution de `prog2_optimized` a mis 60 secondes sur un seul thread et une seule machine, estimez le temps que prendra l'exécution de `prog2_optimized_mpi` avec une matrice de 1500x1500.
 
 Pour passer la taille de matrice en paramètre au programme exécuté, il faut modifier la ligne de commmande de la target `parallel_run` dans le makefile, tel que montré ci-dessous :
 ```makefile

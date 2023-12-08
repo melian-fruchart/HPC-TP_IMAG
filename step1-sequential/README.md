@@ -60,11 +60,7 @@ Lire et exécuter l'implémentation optimisée dans [prog2_optimized.c](./prog2_
 - Identifier la différence entre ces deux programmes
 - Comment expliquez vous cette différence de performance ? **Essayez de formuler des hypothèses, de représenter les multiplications, et n'hésitez pas à nous poser des questions ou nous soumettre des théories.** (Si jamais aucune idée ne vous vient, vous pouvez consulter l'indice : [Locality and Caching](https://www.cs.utexas.edu/users/fussell/courses/cs429h/lectures/Lecture_18-429h.pdf))
 - A l'aide du script [scaling_both.sh](./scaling_both.sh), étudiez l'évolution du temps des deux programmes.
-
-
-
-
-
-
-
-
+- Exécutez la commande suivante et comparez ce temps avec celui de `prog1_naive` :
+```
+./prog2_optimized 1500
+```
